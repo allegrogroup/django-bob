@@ -18,6 +18,7 @@ $(function ($) {
         table.find('input[name="items"]').each(function () {
             this.checked = !this.checked;
         });
+        $('.help-tooltip').tooltip();
         table.find('input[name="selectall"]').prop('checked', false);
     });
     $('.datepicker').datepicker({autoclose: true}).click(function(){

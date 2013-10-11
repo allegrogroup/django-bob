@@ -279,3 +279,8 @@ def bob_export_url(query, value, export_variable_name='export'):
         except KeyError:
             pass
     return query.urlencode()
+
+@register.inclusion_tag('bob/field_wrapper.html')
+def field_wrapper(field):
+    """Render the full control-group tag of a field."""
+    return {'field': field}
